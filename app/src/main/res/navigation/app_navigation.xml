@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.educationsystem.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/allCoursesFragment"
+        android:name="com.example.educationsystem.ui.kurslar.AllCoursesFragment"
+        android:label="fragment_all_courses"
+        tools:layout="@layout/fragment_all_courses" >
+        <action
+            android:id="@+id/action_allCoursesFragment_to_courseFragment"
+            app:destination="@id/courseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseFragment"
+        android:name="com.example.educationsystem.ui.kurslar.kurs.CourseFragment"
+        android:label="fragment_course"
+        tools:layout="@layout/fragment_course" />
+</navigation>
